@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Form3">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="3">
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/CustomText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:foregroundGravity="center_vertical|center_horizontal|center"
+                android:gravity="center"
+                android:text="@string/form3"
+                android:textSize="40dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    style="@style/CustomText"
+                    android:layout_height="match_parent"
+                    android:text="@string/fp1"
+                    android:gravity="center_vertical"
+                    android:layout_weight="1.5"
+                    android:layout_alignParentLeft="true"/>
+
+                <EditText
+                    android:layout_width="0dp"
+                    style="@style/CustomText"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:inputType="textPersonName"
+                    android:layout_alignParentRight="true"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:text="@string/fp2"
+                    style="@style/CustomText"
+                    android:layout_width="0dp"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"/>
+
+                <EditText
+                    android:layout_width="0dp"
+                    style="@style/CustomText"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:inputType="textPersonName"
+                    android:layout_alignParentRight="true"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:text="@string/fp3"
+                    style="@style/CustomText"
+                    android:layout_width="0dp"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5" />
+                <EditText
+                    android:layout_width="0dp"
+                    style="@style/CustomText"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:inputType="textPersonName"
+                    android:layout_alignParentRight="true"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:text="@string/fp4"
+                    style="@style/CustomText"
+                    android:layout_width="0dp"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:layout_alignParentLeft="true"/>
+                <EditText
+                    android:layout_width="0dp"
+                    style="@style/CustomText"
+                    android:layout_height="match_parent"
+                    android:inputType="number"
+                    android:layout_weight="2"
+                    android:layout_alignParentRight="true"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:text="@string/fp5"
+                    style="@style/CustomText"
+                    android:layout_width="0dp"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5" />
+                <EditText
+                    android:layout_width="0dp"
+                    style="@style/CustomText"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:inputType="textShortMessage"
+                    android:layout_alignParentRight="true"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:text="@string/fp6"
+                    style="@style/CustomText"
+                    android:layout_width="0dp"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5" />
+
+                <android.support.v7.widget.AppCompatImageButton
+                    android:id="@+id/calendar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="70dp"
+                    android:background="@android:color/transparent"
+                    app:srcCompat="@drawable/calendar" />
+
+                <TextView
+                    android:id="@+id/E_Date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:ems="10" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:text="@string/fp7"
+                    style="@style/CustomText"
+                    android:layout_width="0dp"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5" />
+                <EditText
+                    android:layout_width="0dp"
+                    style="@style/CustomText"
+                    android:layout_height="match_parent"
+                    android:inputType="textPersonName"
+                    android:layout_weight="2"
+                    android:layout_alignParentRight="true"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:padding="10dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <TextView
+                    android:text="@string/fp8"
+                    android:layout_width="0dp"
+                    style="@style/CustomText"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5" />
+                <EditText
+                    android:layout_width="0dp"
+                    style="@style/CustomText"
+                    android:layout_height="match_parent"
+                    android:inputType="textPostalAddress"
+                    android:layout_weight="2"
+                    android:layout_alignParentRight="true"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:text="@string/fp9"
+                    style="@style/CustomText"
+                    android:layout_width="0dp"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5" />
+                <EditText
+                    android:layout_width="0dp"
+                    style="@style/CustomText"
+                    android:layout_height="match_parent"
+                    android:inputType="number"
+                    android:layout_weight="2"
+                    android:layout_alignParentRight="true"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:text="@string/fp10"
+                    android:layout_width="0dp"
+                    style="@style/CustomText"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5" />
+                <EditText
+                    android:layout_width="0dp"
+                    style="@style/CustomText"
+                    android:layout_height="match_parent"
+                    android:inputType="phone"
+                    android:layout_weight="2"
+                    android:layout_alignParentRight="true"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:text="@string/fp11"
+                    android:layout_width="0dp"
+                    style="@style/CustomText"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5" />
+                <EditText
+                    android:layout_width="0dp"
+                    style="@style/CustomText"
+                    android:layout_height="match_parent"
+                    android:inputType="phone"
+                    android:layout_weight="2"
+                    android:layout_alignParentRight="true"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:text="@string/fp12"
+                    android:layout_width="0dp"
+                    style="@style/CustomText"
+                    android:gravity="center_vertical"
+                    android:inputType=""
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5" />
+                <Spinner
+                    android:layout_width="0dp"
+                    style="@style/CustomText"
+                    android:layout_height="match_parent"
+                    android:id="@+id/caste_category"
+                    android:layout_alignParentRight="true"
+                    android:entries="@array/caste_category"
+                    android:spinnerMode="dropdown"
+                    android:textAlignment="center"
+                    android:layout_weight="2"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:orientation="horizontal">
+                <TextView
+                    android:text="@string/fp13"
+                    android:layout_width="0dp"
+                    style="@style/CustomText"
+                    android:gravity="center_vertical"
+                    android:inputType=""
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5" />
+                <Spinner
+                    android:layout_width="0dp"
+                    style="@style/CustomText"
+                    android:layout_height="match_parent"
+                    android:id="@+id/religion"
+                    android:layout_alignParentRight="true"
+                    android:entries="@array/religion"
+                    android:spinnerMode="dropdown"
+                    android:textAlignment="center"
+                    android:layout_weight="2"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:padding="10dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <TextView
+                    android:text="@string/fp14"
+                    style="@style/CustomText"
+                    android:layout_width="0dp"
+                    android:gravity="center_vertical"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5" />
+                <EditText
+                    android:layout_width="0dp"
+                    style="@style/CustomText"
+                    android:layout_height="match_parent"
+                    android:inputType="number"
+                    android:layout_weight="2"
+                    android:layout_alignParentRight="true"/>
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="horizontal"
+                android:layout_weight="1.5"
+                android:paddingTop="25dp"
+                android:paddingBottom="25dp">
+
+                <Button
+                    android:id="@+id/save"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="right"
+                    android:background="@color/buttonColor"
+                    android:text="@string/Savenext" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
