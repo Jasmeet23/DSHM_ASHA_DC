@@ -1,15 +1,15 @@
-package asha.dshm.asha2.Recycler;
+package asha.dshm.asha2;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.Rect;
+import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -17,18 +17,13 @@ import android.support.v7.widget.Toolbar;
 import android.util.TypedValue;
 import android.view.View;
 
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
 
-import asha.dshm.asha2.Form1;
-import asha.dshm.asha2.Form2;
-import asha.dshm.asha2.Form3;
-import asha.dshm.asha2.Form4;
-import asha.dshm.asha2.R;
+import asha.dshm.asha2.Adapters.FormChoiceAdapter;
 
-public class SubActivityChoice extends AppCompatActivity
+public class ActivityChoice extends AppCompatActivity
         implements FormChoiceAdapter.ListItemClickListener {
 
     private static final int NUM_FORM_ITEMS = 10;
@@ -127,13 +122,13 @@ public class SubActivityChoice extends AppCompatActivity
     private void prepareAlbums() {
         int[] covers = new int[]{
                 R.drawable.ic_launcher_background,
-                R.drawable.ic_people_outline_black_24dp,
-                R.drawable.ic_person_black_24dp,
-                R.drawable.ic_nature_people_black_24dp
-//                R.drawable.maternal,
-//                R.drawable.familyplanning,
-//                R.drawable.child,
-//                R.drawable.child,
+                R.drawable.ic_launcher_background,
+                R.drawable.ic_launcher_background,
+                R.drawable.ic_launcher_background,
+                R.drawable.ic_launcher_background,
+                R.drawable.ic_launcher_background,
+                R.drawable.ic_launcher_background,
+                R.drawable.ic_launcher_background,
 //                R.drawable.sanitation,
 //                R.drawable.senior,
 //                R.drawable.malnourished,
@@ -147,10 +142,14 @@ public class SubActivityChoice extends AppCompatActivity
 //                R.drawable.immunization
         };
 
-        albumList.add(new SubActivityDetails(R.string.form1, 1, covers[0]));
-        albumList.add(new SubActivityDetails(R.string.form2, 2, covers[1]));
-        albumList.add(new SubActivityDetails(R.string.form3, 3, covers[2]));
-        albumList.add(new SubActivityDetails(R.string.form4, 4, covers[3]));
+        albumList.add(new SubActivityDetails(R.string.Act1, 1, covers[0]));
+        albumList.add(new SubActivityDetails(R.string.Act2, 2, covers[1]));
+        albumList.add(new SubActivityDetails(R.string.Act3, 3, covers[2]));
+        albumList.add(new SubActivityDetails(R.string.Act4, 4, covers[3]));
+        albumList.add(new SubActivityDetails(R.string.Act5, 5, covers[4]));
+        albumList.add(new SubActivityDetails(R.string.Act6, 6, covers[5]));
+        albumList.add(new SubActivityDetails(R.string.Act7, 7, covers[6]));
+        albumList.add(new SubActivityDetails(R.string.Act8, 8, covers[7]));
         adapter.notifyDataSetChanged();
     }
 
@@ -165,25 +164,25 @@ public class SubActivityChoice extends AppCompatActivity
         Intent intent;
         switch(clickedListItem){
             case 0: {
-                intent = new Intent(SubActivityChoice.this, Form1.class);
+                intent = new Intent(ActivityChoice.this, FillChoice.class);
                 startActivity(intent);
                 break;
             }
-            case 1: {
-                intent = new Intent(SubActivityChoice.this, Form2.class);
-                startActivity(intent);
-                break;
-            }
-            case 2: {
-                intent = new Intent(SubActivityChoice.this, Form3.class);
-                startActivity(intent);
-                break;
-            }
-            case 3: {
-                intent = new Intent(SubActivityChoice.this, Form4.class);
-                startActivity(intent);
-                break;
-            }
+//            case 1: {
+//                intent = new Intent(ActivityChoice.this, Form2.class);
+//                startActivity(intent);
+//                break;
+//            }
+//            case 2: {
+//                intent = new Intent(ActivityChoice.this, Form3.class);
+//                startActivity(intent);
+//                break;
+//            }
+//            case 3: {
+//                intent = new Intent(ActivityChoice.this, Form4.class);
+//                startActivity(intent);
+//                break;
+//            }
         }
     }
 

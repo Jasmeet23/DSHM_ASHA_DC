@@ -1,10 +1,10 @@
-package asha.dshm.asha2.Recycler;
+package asha.dshm.asha2;
 
 /**
  * Created by Akshara on 11-05-2018.
  */
 
-public class ActivityDetails {
+public class SubActivityDetails {
     int name;
     int id;
 
@@ -33,13 +33,13 @@ public class ActivityDetails {
     }
 
     int image;
-    ActivityDetails(int n, int i, int img)
+    SubActivityDetails(int n, int i, int img)
     {
         name=n;
         id=i;
         image=img;
     }
-    ActivityDetails(int n, int i)
+    SubActivityDetails(int n, int i)
     {
         name=n;
         id=i;
