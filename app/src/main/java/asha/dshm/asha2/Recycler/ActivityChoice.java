@@ -22,6 +22,7 @@ import java.util.List;
 import java.util.Locale;
 
 import asha.dshm.asha2.FillChoice;
+import asha.dshm.asha2.Adapters.FormChoiceAdapter;
 import asha.dshm.asha2.R;
 
 public class ActivityChoice extends AppCompatActivity

@@ -1,4 +1,4 @@
-package asha.dshm.asha2.Recycler;
+package asha.dshm.asha2.Adapters;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
@@ -12,6 +12,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import asha.dshm.asha2.R;
+import asha.dshm.asha2.Recycler.SubActivityDetails;
 
 /**
  * Created by Akshara on 11-05-2018.
@@ -68,6 +69,7 @@ public class FormChoiceAdapter extends RecyclerView.Adapter<FormChoiceAdapter.My
         holder.title.setText(album.getName());
         holder.count.setText(album.getId() + "");
         holder.thumbnail.setImageResource(album.getImage());
+
 //        holder.thumbnail.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
