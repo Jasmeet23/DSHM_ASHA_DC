@@ -38,8 +38,7 @@ import java.util.List;
 import java.util.Locale;
 
 import asha.dshm.asha2.R;
-import asha.dshm.asha2.Recycler.ActivityChoice;
-import asha.dshm.asha2.Recycler.SubActivityChoice;
+import asha.dshm.asha2.ActivityChoice;
 
 import static android.Manifest.permission.INTERNET;
 import static android.Manifest.permission.READ_CONTACTS;
