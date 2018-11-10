@@ -73,6 +73,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     private View mProgressView;
     private View mLoginFormView;
     SharedPreferences sp;
+    SharedPreferences sharedPreferences;
+    private static final String PREF_NAME = "prefs";
+    SharedPreferences.Editor editor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,11 +85,22 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         mEmailView = (AutoCompleteTextView) findViewById(R.id.email);
         populateAutoComplete();
         sp = getSharedPreferences("Login",MODE_PRIVATE);
-        if(sp.getBoolean("Login",false)){
-            Log.d("login", "logged in");
+        sharedPreferences = getSharedPreferences(PREF_NAME, MODE_PRIVATE);
+        editor = sharedPreferences.edit();
+
+        if(sharedPreferences.getBoolean("Login",false)){
+            SharedPreferences sp2 = getSharedPreferences("LoginId",MODE_PRIVATE);
+            Log.d("login", "logged in"+sharedPreferences.getString("LoginId",""));
 //            Intent loginIntent= new Intent(LoginActivity.this, SubActivityChoice.class);
 //            startActivity(loginIntent);
-            finish();
+            mEmailView.setText(sharedPreferences.getString("LoginId",""));
+            //finish();
+        }
+        else
+        {
+
+            Log.d("login", "not logged in "+sharedPreferences.getString("LoginId",""));
+
         }
         mPasswordView = (EditText) findViewById(R.id.password);
         mPasswordView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
@@ -377,23 +391,25 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             } catch (InterruptedException e) {
                 return false;
             }
-
+            boolean result=false;
             for (String credential : DUMMY_CREDENTIALS) {
                 String[] pieces = credential.split(":");
+
+                Log.d("login attempt ", mEmail+" ");
                 if (pieces[0].equals(mEmail)) {
                     // Account exists, return true if the password matches.
-
+                    Log.d("login attempt ", mEmail+" "+mPassword);
                     return pieces[1].equals(mPassword);
                 }
                 else {
 //                    mEmailView.setError(getString(R.string.error_invalid_email));
 //                    mEmailView.requestFocus();
-                    return false;
+                    result= false;
                 }
             }
 
             // TODO: register the new account here.
-            return true;
+            return result;
         }
 
         @Override
@@ -404,9 +420,12 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             if (success) {
                 Intent loginIntent= new Intent(LoginActivity.this, ActivityChoice.class);
                 //loginIntent.putExtra("la", lan);
-                Log.d("login", "logged in");
-                PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putBoolean("Login", true).commit();
-
+                Log.d("login", "logged in1 "+mEmailView.getText().toString() );
+//                PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putBoolean("Login", true).commit();
+//                PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit().putString("LoginId", mEmailView.getText().toString()).commit();
+                editor.putBoolean("Login", true);
+                editor.putString("LoginId", mEmailView.getText().toString());
+                editor.apply();
                 startActivity(loginIntent);
                 finish();
             } else {

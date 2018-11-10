@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/DSHM_ASHA_DC.iml" filepath="$PROJECT_DIR$/DSHM_ASHA_DC.iml" />
+      <module fileurl="file://E:\iiitd\ASHA_2\Asha New\DSHM_ASHA_DC2\DSHM_ASHA_DC.iml" filepath="E:\iiitd\ASHA_2\Asha New\DSHM_ASHA_DC2\DSHM_ASHA_DC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/DSHM_ASHA_DC2.iml" filepath="$PROJECT_DIR$/.idea/DSHM_ASHA_DC2.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://E:\iiitd\ASHA_2\Asha New\DSHM_ASHA_DC2\app\app.iml" filepath="E:\iiitd\ASHA_2\Asha New\DSHM_ASHA_DC2\app\app.iml" />
     </modules>
   </component>
 </project>
