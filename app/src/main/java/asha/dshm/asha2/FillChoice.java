@@ -30,6 +30,7 @@ public class FillChoice extends AppCompatActivity implements View.OnClickListene
             case R.id.regNew: {
                 Intent intent = new Intent(this, Form3.class);
                 startActivity(intent);
+                //get family ID from server, store in global variable
                 break;
             }
             case R.id.reSurvey: {

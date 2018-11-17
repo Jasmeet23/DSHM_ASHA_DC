@@ -115,7 +115,7 @@
                     android:text="@string/bA4" />
 
                 <RadioGroup
-                    android:id="@+id/kitchen"
+                    android:id="@+id/room"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
