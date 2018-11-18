@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">आशा</string>
+    <string name="title_activity_login">साइन इन करें</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">ईमेल</string>
+    <string name="prompt_password">पासवर्ड </string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">साइन इन करें</string>
+    <string name="error_invalid_email">यह ईमेल पता अमान्य है</string>
+    <string name="error_invalid_password">यह पासवर्ड बहुत छोटा है</string>
+    <string name="error_incorrect_password">यह पासवर्ड गलत है</string>
+    <string name="error_field_required">यह फ़ील्ड आवश्यक है</string>
+    <string name="permission_rationale">"ईमेल पूर्णता प्रदान करने के लिए संपर्क अनुमतियां आवश्यक हैं"
+    </string>
+
+    <string name = "title"> भाषा चुनें </string>
+    <string name = "hin"> हिंदी </string>
+         <string name = "eng"> अंग्रेज़ी </string>
+
+
+    <string name = "save"> सहेजें </string>
+         <string name = "Savenext"> सहेजें और आगे बढ़ें </string>
+
+    <!--Choice of Survey-->
+    <string name = "update"> मौजूदा रिकॉर्ड अपडेट करें </string>
+         <string name = "newEntry"> नया परिवार पंजीकृत करें </string>
+         <string name = "reSurvey"> फिर से सर्वेक्षण करें </string>
+
+    <!--Activity Choices-->
+    <string name = "ActivityHeading"> क्रियाएँ </string>
+         <string name = "ActivitySubHeading"> कृपया श्रेणी चुनें </string>
+         <string name = "form1"> मूलभूत सुविधाएं </string>
+         <string name = "form2"> पारिवारिक सदस्य विवरण </string>
+         <string name = "form3"> पारिवारिक प्रोफ़ाइल </string>
+         <string name = "form4"> अन्य सेवा प्रावधान </string>
+         <string name  = "form5"> कट्यूबरक्लोसिस </string>
+
+
+    <!--subheadings-->
+    <string name="tb_symp">रोग के लक्षण:</string>
+
+
+    <!--Sub Activity Choices-->
+    <string name = "Act1"> घरेलू सर्वेक्षण </string>
+         <string name = "Act2"> एनसीडी सर्वेक्षण </string>
+         <string name  = "Act3"> एएनसी </string>
+         <string name = "Act4"> पारिवारिक योजना </string>
+         <string name = "Act5"> प्रोत्साहन </string>
+         <string name = "Act6"> विकल्प 6 </string>
+         <string name = "Act7"> विकल्प 7 </string>
+         <string name = "Act8"> विकल्प 8 </string>
+
+
+    <!--Basic Amenities-->
+    <string name = "bA1"> घर का प्रकार </string>
+    <string name = "bA2"> स्वामित्व </string>
+    <string name = "bA3"> कमरों की संख्या </string>
+    <string name = "bA4"> क्या कोई अलग कमरा है? </string>
+    <string name = "bA5"> पावर </string>
+    <string name = "bA6"> जल स्रोत </string>
+    <string name = "bA7"> वाहन </string>
+    <string name = "bA8"> शौचालय सुविधा </string>
+    <string name = "bA9"> शौचालयों में पानी की उपलब्धता </string>
+    <string name = "bA10"> ड्रेनेज </string>
+    <string name = "bA11"> कचरा निपटान </string>
+
+
+
+    <string-array name="house_type_array">
+        <item> कच्चा </item>
+        <item> पक्का </item>
+        <item> अर्ध पक्का </item>
+        <item> झुग्गी </item>
+        <item> बेघर </item>
+    </string-array>
+
+    <string-array name="ownership_array">
+        <item> किराए पर</item>
+        <item>अपना</item>
+        <item>सरकारी</item>
+    </string-array>
+
+    <string-array name="rooms_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
+    <string-array name="water_source_array">
+        <item>Govt. Tap Water</item>
+        <item>Hand Pump</item>
+        <item>Tanker</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="wheeler_array">
+        <item>Two Wheeler</item>
+        <item>Three Wheeler</item>
+        <item>Four Wheeler</item>
+    </string-array>
+
+    <string-array name="two_wheeler_array">
+        <item>Cycle</item>
+        <item>Motor Cycle</item>
+    </string-array>
+
+    <string-array name="three_wheeler_array">
+        <item>Rickshaw</item>
+        <item>Auto</item>
+    </string-array>
+
+    <string-array name="toilet_array">
+        <item>Own in house</item>
+        <item>Public</item>
+        <item>Open Defecation</item>
+    </string-array>
+
+    <string-array name="drainage_array">
+        <item>Closed</item>
+        <item>Open</item>
+        <item>Blocked</item>
+    </string-array>
+
+    <string-array name="garbage_array">
+        <item>By Sweeper</item>
+        <item>Open</item>
+        <item>Other</item>
+    </string-array>
+
+    <string name="yes">YES</string>
+    <string name="no">NO</string>
+
+    <string name="save_form">SAVE</string>
+
+    <!--Family Member Details-->
+    <string name="Updation_date">Date of Updation</string>
+    <string name="family_details">Add family details</string>
+    <string name="No_family_members">Number of family members</string>
+    <string name="Sex">Sex</string>
+    <string name="Male">Male</string>
+    <string name="Female">Female</string>
+    <string name="next">Next</string>
+
+
+    <!--TB related strings-->
+
+    <!--tb symptoms-->
+    <string name="tb_sym1">Cough</string>
+    <string name="tb_sym2">Fever</string>
+    <string name="tb_sym3">Loss of appetite</string>
+    <string name="tb_sym4">Loss of weight</string>
+    <string name="tb_sym5">Blood in sputum</string>
+    <string name="tb_sym6">Chest pain</string>
+    <string name="tb_sym7">Past history of TB treatment</string>
+
+    <!--treatment status related strings-->
+    <string name="treatment_Status">Treatment status</string>
+    <string name="treatment_complete">Treatment completed</string>
+    <string name="treatment_on">Treatment going on</string>
+    <string name="treatment_notstarted">Treatment not yet started</string>
+    <string name="treatment_incomplete">Treatment left in between</string>
+
+
+    <string-array name="no_array">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+    </string-array>
+
+    <string name="dispensary">Dispensary</string>
+    <!--Family Profile-->
+    <string name="fp1">"Name of ASHA"</string>
+    <string name="fp2">"Name of ANM"</string>
+    <string name="fp3">"Name of Health Facility"</string>
+    <string name="fp4">"Area Code"</string>
+    <string name="fp5">"Area Description"</string>
+    <string name="fp6">"Data of Survey"</string>
+    <string name="fp7">"Name of Head of Family"</string>
+    <string name="fp8">"Address"</string>
+    <string name="fp9">"Pin Code"</string>
+    <string name="fp10">"Mobile Number"</string>
+    <string name="fp11">"Land Line Number"</string>
+    <string name="fp12">"Category"</string>
+    <string name="fp13">"Religion"</string>
+    <string name="fp14">"Family ID"</string>
+
+    <string-array name="caste_category">
+        <item>"General</item>
+        <item>"SC</item>
+        <item>"ST</item>
+        <item>"Other</item>
+    </string-array>
+    <string-array name="religion">
+        <item>"Hindu</item>
+        <item>"Muslim</item>
+        <item>"Sikh</item>
+        <item>"Isai</item>
+        <item>"Other</item>
+    </string-array>
+
+    <string name="family">Family Member Details</string>
+
+    <string name="sn">SN</string>
+    <string name="Name">Name</string>
+    <string name="dob">Date of birth</string>
+    <string name="age">Age</string>
+    <string name="aadhar">Aadhar Number</string>
+    <string name="occupation">Occupation</string>
+    <string name="marital_status">Marital Status</string>
+    <string name="potential_problems">Potential Problems</string>
+
+    <string-array name="gender_array">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="occupation_array">
+        <item>Private</item>
+        <item>Govt.</item>
+        <item>Self Employee</item>
+        <item>Daily wager</item>
+        <item>Unemployed</item>
+        <item>Student</item>
+        <item>Housewife</item>
+    </string-array>
+
+    <string-array name="marital_array">
+        <item>Married</item>
+        <item>Unmarried</item>
+        <item>Divorced</item>
+        <item>Widowed</item>
+    </string-array>
+
+    <string name="immunisation">Immunisation</string>
+    <string name="Nutrition">Nutrition</string>
+    <string name="pregnancy_reg">Pregnancy Registration</string>
+    <string name="non_communicable">Non-Communicable Disease</string>
+    <string name="visual">Visual Impairment</string>
+    <string name="RNTCP">RNTCP</string>
+    <string name="disability">Disability</string>
+    <string name="mortality">Mortality</string>
+
+</resources>

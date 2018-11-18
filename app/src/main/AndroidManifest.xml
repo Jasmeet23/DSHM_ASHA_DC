@@ -18,11 +18,7 @@
         <activity
             android:name=".Login.LoginActivity"
             android:label="@string/app_name">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".Form1" />
         <activity android:name=".SubActivityChoice" />
@@ -35,7 +31,16 @@
         <activity android:name=".Form6" />
         <activity android:name=".treatment_details_form5" />
         <activity android:name=".FillChoice" />
-        <activity android:name=".UpdateRecord"></activity>
+        <activity android:name=".UpdateRecord">
+
+        </activity>
+        <activity android:name=".ChangeLanguage">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
