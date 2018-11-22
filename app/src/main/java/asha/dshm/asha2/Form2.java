@@ -65,7 +65,6 @@ public class Form2 extends AppCompatActivity implements AdapterView.OnItemSelect
 
 
         final TextView date = (TextView)findViewById(R.id.E_Date);
-
         final Calendar c = Calendar.getInstance();
         mYear = c.get(Calendar.YEAR);
         mMonth = c.get(Calendar.MONTH);
@@ -80,8 +79,6 @@ public class Form2 extends AppCompatActivity implements AdapterView.OnItemSelect
         }
 
         //date.setText( mDay+ "-" + (mMonth) + "-" + mYear);
-
-
         final ImageButton calendar = (ImageButton)findViewById(R.id.calendar);
         calendar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -119,16 +116,6 @@ public class Form2 extends AppCompatActivity implements AdapterView.OnItemSelect
                 Intent intent = new Intent(Form2.this,Family_Details.class);
                 startActivity(intent);
 
-
-
-                /*String value = getIntent().getExtras().getString("Name");
-                LinearLayout ll = (LinearLayout)findViewById(R.id.fam_Details);
-                Button btn = new Button(getBaseContext());
-                btn.setText(value);
-                btn.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
-                ll.addView(btn);*/
-
-
                 LinearLayout ll = (LinearLayout) findViewById(R.id.fam_Details);
 
                 btn[0] = new Button(context);
@@ -137,13 +124,6 @@ public class Form2 extends AppCompatActivity implements AdapterView.OnItemSelect
                 //btn[0].setTag("button");
                 btn[0].setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
                 ll.addView(btn[0]);
-
-
-
-
-
-
-
 
 
             }

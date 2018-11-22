@@ -45,10 +45,10 @@ public class FamilyResponse {
     private String landline;
     @SerializedName("category")
     @Expose
-    private String category;
+    private int category;
     @SerializedName("religion")
     @Expose
-    private String religion;
+    private int religion;
 
     public String getFamilyId() {
         return familyId;
@@ -146,25 +146,20 @@ public class FamilyResponse {
         this.landline = landline;
     }
 
-    public String getCategory() {
+    public int getCategory() {
         return category;
     }
 
-    public void setCategory(String category) {
+    public void setCategory(int category) {
         this.category = category;
     }
 
-    public String getReligion() {
+    public int getReligion() {
         return religion;
     }
 
-    public void setReligion(String religion) {
+    public void setReligion(int religion) {
         this.religion = religion;
     }
-//
-//    @Override
-//    public String toString() {
-//        return new ToStringBuilder(this).append("familyId", familyId).append("asha", asha).append("anm", anm).append("healthFacility", healthFacility).append("areaCode", areaCode).append("areaDescription", areaDescription).append("dateOfSurvey", dateOfSurvey).append("nameHeadOfFamily", nameHeadOfFamily).append("address", address).append("pincode", pincode).append("mobileNo", mobileNo).append("landline", landline).append("category", category).append("religion", religion).toString();
-//    }
 
 }
