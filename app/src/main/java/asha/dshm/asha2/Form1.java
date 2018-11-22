@@ -154,22 +154,152 @@ public class Form1 extends AppCompatActivity implements AdapterView.OnItemSelect
         Boolean seprateRooms = radioRoomButton.getText().toString().trim().compareTo("YES") == 0;
         Boolean electricity = radioElectricityButton.getText().toString().trim().compareTo("YES") == 0;
         Boolean water = radioWaterButton.getText().toString().trim().compareTo("YES") == 0;
-
+        int a[] = mapValues();
+        Log.d("ba","BA");
+        for(int i=0;i<a.length;i++){
+            Log.d("ARRAY",a[i]+"\n");
+        }
 
         return apii.basicAmenities(
-                spinner_house.getSelectedItem().toString().trim(),
-                spinner_own.getSelectedItem().toString().trim(),
+                42 + "",
+                a[0]+"",
+                a[1]+"",
                 Integer.parseInt(spinner_rooms.getSelectedItem().toString()),
                 seprateRooms,
                 electricity,
-                spinner_water.getSelectedItem().toString().trim(),
-                spinner_wheeler.getSelectedItem().toString().trim(),
-                spinner_toilet.getSelectedItem().toString().trim(),
+                a[2]+"",
+                a[3]+"",
+                a[4]+"",
                 water,
-                spinner_drainage.getSelectedItem().toString().trim(),
-                spinner_garbage.getSelectedItem().toString().trim()
+                a[5]+"",
+                a[6]
         );
+    }
+
+    public int[] mapValues() {
+        int a[] = new int[7];
+        switch (spinner_house.getSelectedItem().toString()) {
+            case "Kachha": {
+                Log.d("kachha","kachha");
+                a[0] = 5;
+                break;
+            }
+            case "Pakka": {
+                a[0] = 2;
+                break;
+            }
+            case "Semi-Pakka": {
+                a[0] = 3;
+                break;
+            }
+            case "Jhuggi": {
+                a[0] = 4;
+                break;
+            }
+            case "Homeless": {
+                a[0] = 5;
+                break;
+            }
+        }
+        switch (spinner_own.getSelectedItem().toString()) {
+            case "Rented": {
+                a[1] = 1;
+                break;
+            }
+            case "Own": {
+                a[1] = 2;
+                break;
+            }
+            case "Government": {
+                a[1] = 3;
+                break;
+            }
+
+        }
+
+        switch (spinner_water.getSelectedItem().toString()) {
+            case "Govt. Tap Water": {
+                a[2] = 1;
+                break;
+            }
+            case "Hand Pump": {
+                a[2] = 2;
+                break;
+            }
+            case "Tanker": {
+                a[2] = 3;
+                break;
+            }
+            case "Other": {
+                a[2] = 4;
+                break;
+            }
+        }
+
+        switch (spinner_wheeler.getSelectedItem().toString()) {
+            case "Two Wheeler": {
+                a[3] = 1;
+                break;
+            }
+            case "Three Wheeler": {
+                a[3] = 2;
+                break;
+            }
+            case "Four Wheeler": {
+                a[3] = 3;
+                break;
+            }
+        }
+
+        switch (spinner_toilet.getSelectedItem().toString()) {
+            case "Own in house": {
+                a[4] = 1;
+                break;
+            }
+            case "Public": {
+                a[4] = 2;
+                break;
+            }
+            case "Open Defacation": {
+                a[4] = 3;
+                break;
+            }
+        }
+
+        switch (spinner_drainage.getSelectedItem().toString()) {
+            case "Closed": {
+                a[5] = 1;
+                break;
+            }
+            case "Open": {
+                a[5] = 2;
+                break;
+            }
+            case "Blocked": {
+                a[5] = 3;
+                break;
+            }
+        }
+        switch (spinner_garbage.getSelectedItem().toString()) {
+            case "By Sweeper": {
+                a[6] = 1;
+                break;
+            }
+            case "Open": {
+                a[6] = 2;
+                break;
+            }
+            case "Other": {
+                a[6] = 3;
+                break;
+            }
+        }
+        return a;
+
     }
 
 
 }
+
+
+

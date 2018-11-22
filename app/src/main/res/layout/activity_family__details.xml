@@ -27,6 +27,7 @@
                 android:foregroundGravity="center_vertical|center_horizontal|center"
                 android:gravity="center"
                 android:text="@string/family"
+                android:theme="@style/CustomText"
                 android:textSize="50dp"
                 android:textStyle="bold" />
 
