@@ -31,37 +31,37 @@ public class Form2 extends AppCompatActivity implements AdapterView.OnItemSelect
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form2);
 
-        Spinner spinner_family = (Spinner) findViewById(R.id.number_member_array);
+//        Spinner spinner_family = (Spinner) findViewById(R.id.number_member_array);
 // Create an ArrayAdapter using the string array and a default spinner layout
-        ArrayAdapter<CharSequence> adapter_family = ArrayAdapter.createFromResource(this,
-                R.array.no_array, android.R.layout.simple_spinner_item);
+//        ArrayAdapter<CharSequence> adapter_family = ArrayAdapter.createFromResource(this,
+//                R.array.no_array, android.R.layout.simple_spinner_item);
 // Specify the layout to use when the list of choices appears
-        adapter_family.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        adapter_family.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 // Apply the adapter to the spinner
-        spinner_family.setAdapter(adapter_family);
+//        spinner_family.setAdapter(adapter_family);
 
         //age = (EditText)findViewById(R.id.E_Age);
-        spinner_family.setOnItemSelectedListener(this);
+//        spinner_family.setOnItemSelectedListener(this);
 
-        Spinner spinner_male = (Spinner) findViewById(R.id.male_array);
+//        Spinner spinner_male = (Spinner) findViewById(R.id.male_array);
 // Create an ArrayAdapter using the string array and a default spinner layout
-        ArrayAdapter<CharSequence> adapter_male = ArrayAdapter.createFromResource(this,
-                R.array.no_array, android.R.layout.simple_spinner_item);
-// Specify the layout to use when the list of choices appears
-        adapter_male.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        ArrayAdapter<CharSequence> adapter_male = ArrayAdapter.createFromResource(this,
+//                R.array.no_array, android.R.layout.simple_spinner_item);
+//// Specify the layout to use when the list of choices appears
+//        adapter_male.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 // Apply the adapter to the spinner
-        spinner_male.setAdapter(adapter_male);
+//        spinner_male.setAdapter(adapter_male);
 
         //age = (EditText)findViewById(R.id.E_Age);
-        spinner_male.setOnItemSelectedListener(this);
+//        spinner_male.setOnItemSelectedListener(this);
 
 
-        Spinner spinner_female = (Spinner) findViewById(R.id.female_array);
-        ArrayAdapter<CharSequence> adapter_female = ArrayAdapter.createFromResource(this,
-                R.array.no_array, android.R.layout.simple_spinner_item);
-        adapter_female.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinner_female.setAdapter(adapter_male);
-        spinner_female.setOnItemSelectedListener(this);
+//        Spinner spinner_female = (Spinner) findViewById(R.id.female_array);
+//        ArrayAdapter<CharSequence> adapter_female = ArrayAdapter.createFromResource(this,
+//                R.array.no_array, android.R.layout.simple_spinner_item);
+//        adapter_female.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//        spinner_female.setAdapter(adapter_male);
+//        spinner_female.setOnItemSelectedListener(this);
 
 
         final TextView date = (TextView)findViewById(R.id.E_Date);
@@ -116,14 +116,14 @@ public class Form2 extends AppCompatActivity implements AdapterView.OnItemSelect
                 Intent intent = new Intent(Form2.this,Family_Details.class);
                 startActivity(intent);
 
-                LinearLayout ll = (LinearLayout) findViewById(R.id.fam_Details);
+//                LinearLayout ll = (LinearLayout) findViewById(R.id.fam_Details);
 
                 btn[0] = new Button(context);
                 int iden = 1;
                 //btn[0].setId(iden);
                 //btn[0].setTag("button");
                 btn[0].setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT));
-                ll.addView(btn[0]);
+//                ll.addView(btn[0]);
 
 
             }

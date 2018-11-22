@@ -40,22 +40,22 @@
                 <TextView
                     android:id="@+id/updation"
                     style="@style/CustomText"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="@string/Updation_date" />
 
                 <android.support.v7.widget.AppCompatImageButton
                     android:id="@+id/calendar"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="70dp"
                     android:layout_marginTop="10dp"
                     android:background="@android:color/transparent"
                     app:srcCompat="@drawable/calendar" />
                 <TextView
                     android:id="@+id/E_Date"
-                    android:layout_width="wrap_content"
+                    android:layout_width="0dp"
                     android:layout_marginTop="9dp"
                     android:theme="@style/CustomText"
                     android:layout_height="wrap_content"
@@ -92,10 +92,12 @@
 </android.support.v7.widget.RecyclerView>
 
             <android.support.design.widget.FloatingActionButton
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/add"
                 app:fabSize="normal"
+                android:src="@drawable/ic_add_black_24dp"
                 android:layout_margin="16dp"
                 android:layout_gravity="right"
                 android:background="@color/buttonColor"
