@@ -8,8 +8,10 @@ import retrofit2.http.POST;
 
 public interface ApiInterface {
     @FormUrlEncoded
-    @POST("/family_profile")
-    Call<FamilyResponse> family(@Field("asha") String asha,
+    @POST("/family_profile/")
+    Call<FamilyResponse> family(
+                                @Field("family_id") String fam_id,
+                                @Field("asha") String asha,
                                 @Field("anm") String anm,
                                 @Field("health_facility") String health_facility,
                                 @Field("area_code") Integer area_code,
@@ -25,8 +27,9 @@ public interface ApiInterface {
     );
 
     @FormUrlEncoded
-    @POST("/basic_amenities")
-    Call<BasicAmenitiesResponse> basicAmenities(@Field("house_type") String house_type,
+    @POST("/basic_amenities/")
+    Call<BasicAmenitiesResponse> basicAmenities(@Field("family_id") String fam_id,
+                                                @Field("house_type") String house_type,
                                                 @Field("ownership") String ownership,
                                                 @Field("no_of_rooms") Integer no_of_rooms,
                                                 @Field("separate_room") Boolean separate_room,
@@ -36,12 +39,13 @@ public interface ApiInterface {
                                                 @Field("toilet_facility") String toilet_facility,
                                                 @Field("water_available_in_toilet") Boolean water_available_in_toilet,
                                                 @Field("drainage") String drainage,
-                                                @Field("garbage_disposal") String garbage_disposal
+                                                @Field("garbage_disposal") int garbage_disposal
     );
 
     @FormUrlEncoded
-    @POST("/r'other_service_provision")
-    Call<OtherServiceResponse> otherService(@Field("anganwadi_services") Boolean anganwadi_services,
+    @POST("/other_service_provision/")
+    Call<OtherServiceResponse> otherService(@Field("family_id") String fam_id,
+                                            @Field("anganwadi_services") Boolean anganwadi_services,
                                             @Field("CATs") Boolean CATs,
                                             @Field("Disability") Boolean Disability,
                                             @Field("PDS") Boolean PDS

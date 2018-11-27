@@ -137,7 +137,7 @@
 
     <!--Family Member Details-->
     <string name="Updation_date">Date of Updation</string>
-    <string name="family_details">Add family details</string>
+    <string name="family_details">Add family member</string>
     <string name="No_family_members">Number of family members</string>
     <string name="Sex">Sex</string>
     <string name="Male">Male</string>

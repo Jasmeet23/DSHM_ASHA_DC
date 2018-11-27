@@ -13,12 +13,12 @@ import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import java.io.IOException;
 import java.util.Calendar;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
 
 public class Form3 extends AppCompatActivity implements View.OnClickListener {
 
@@ -68,7 +68,7 @@ public class Form3 extends AppCompatActivity implements View.OnClickListener {
                             public void onDateSet(DatePicker view, int year,
                                                   int monthOfYear, int dayOfMonth) {
 
-                                date.setText(dayOfMonth + "-" + (monthOfYear + 1) + "-" + year);
+                                date.setText(year + "-" + (monthOfYear + 1) + "-" + dayOfMonth);
 
                             }
                         }, mYear, mMonth, mDay);
@@ -83,23 +83,35 @@ public class Form3 extends AppCompatActivity implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.save: {
-//                while(true){
-                    if(!validate())
-                        AreaCode.setError("Enter code");
+                if (!validate())
+                    AreaCode.setError("Enter code");
+                Log.d(TAG, "mahika1");
 
-//                }
                 postData().enqueue(new Callback<FamilyResponse>() {
-
                     @Override
                     public void onResponse(Call<FamilyResponse> call, Response<FamilyResponse> response) {
                         if (response.isSuccessful()) {
                             Log.i(TAG, "post submitted to API." + response.body().toString());
+                            Log.d(TAG, "pass");
+                        }
+                        if (!response.isSuccessful()) {
+                            Log.i(TAG, "post not done." + response.errorBody().toString());
+                            Log.d(TAG, response.code() + "");
+                            Log.d(TAG, "fail");
                         }
                     }
 
                     @Override
                     public void onFailure(Call<FamilyResponse> call, Throwable t) {
+                        // logging probably not necessary
+                        Log.d(TAG, call.request().body().toString());
+                        if (t instanceof IOException) {
+                            System.out.println("failure network");
+                        }
+
+
                         Log.e(TAG, "Unable to submit post to API.");
+                        Log.d(TAG, "fail");
                     }
                 });
                 Intent nextIntent = new Intent(this, Form1.class);
@@ -109,8 +121,8 @@ public class Form3 extends AppCompatActivity implements View.OnClickListener {
         }
     }
 
-    Boolean validate(){
-        if(AreaCode.getText().toString().compareTo("")==0)
+    Boolean validate() {
+        if (AreaCode.getText().toString().compareTo("") == 0)
             return false;
         return true;
     }
@@ -118,7 +130,51 @@ public class Form3 extends AppCompatActivity implements View.OnClickListener {
 
     private Call<FamilyResponse> postData() {
         ApiInterface apii = Api.getClient().create(ApiInterface.class);
-        return apii.family(Asha.getText().toString().trim(),
+        Log.d(TAG, "mahika2");
+        int category = 0, religion = 0;
+        switch (Category.getSelectedItem().toString()) {
+            case "General": {
+                category = 1;
+                break;
+            }
+            case "SC": {
+                category = 2;
+                break;
+            }
+            case "ST": {
+                category = 3;
+                break;
+            }
+            case "Other": {
+                category = 4;
+                break;
+            }
+        }
+        switch (Religion.getSelectedItem().toString()) {
+            case "Hindu": {
+                religion = 1;
+                break;
+            }
+            case "Muslim": {
+                religion = 2;
+                break;
+            }
+            case "Sikh": {
+                religion = 3;
+                break;
+            }
+            case "Isai": {
+                religion = 4;
+                break;
+            }
+            case "Other": {
+                religion = 5;
+                break;
+            }
+        }
+        return apii.family(
+                44 + "",
+                Asha.getText().toString().trim(),
                 Anm.getText().toString().trim(),
                 Health.getText().toString().trim(),
                 Integer.parseInt(AreaCode.getText().toString().trim()),
@@ -129,8 +185,8 @@ public class Form3 extends AppCompatActivity implements View.OnClickListener {
                 Pincode.getText().toString().trim(),
                 MobileNo.getText().toString().trim(),
                 LandlineNo.getText().toString().trim(),
-                Category.getSelectedItem().toString(),
-                Religion.getSelectedItem().toString()
+                category+"",
+                religion+""
         );
     }
 
