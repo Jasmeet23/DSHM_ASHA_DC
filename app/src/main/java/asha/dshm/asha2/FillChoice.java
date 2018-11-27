@@ -55,6 +55,11 @@ public class FillChoice extends AppCompatActivity implements View.OnClickListene
         recreate();
     }
 
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
 
     @Override
     public void onClick(View v) {

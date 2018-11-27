@@ -37,6 +37,7 @@ public class FormChoiceAdapter extends RecyclerView.Adapter<FormChoiceAdapter.My
             thumbnail = (ImageView) view.findViewById(R.id.thumbnail);
             holderLayout = (RelativeLayout) view.findViewById(R.id.holderLayout);
             view.setOnClickListener(this);
+            thumbnail.setOnClickListener(this);
         }
 
         @Override

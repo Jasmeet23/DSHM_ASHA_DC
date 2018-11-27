@@ -78,6 +78,11 @@ public class Form3 extends AppCompatActivity implements View.OnClickListener {
         });
         next.setOnClickListener(this);
     }
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return true;
+    }
 
     @Override
     public void onClick(View v) {

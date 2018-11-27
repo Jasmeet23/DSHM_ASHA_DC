@@ -23,16 +23,26 @@
         <activity android:name=".Form1" />
         <activity android:name=".SubActivityChoice" />
         <activity android:name=".ActivityChoice" />
-        <activity android:name=".Form3" />
+        <activity android:name=".Form3" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="asha.dshm.asha2.FillChoice" />
+        </activity>
         <activity android:name=".Form2" />
         <activity android:name=".Form4" />
         <activity android:name=".Family_Details" />
         <activity android:name=".Form5" />
         <activity android:name=".Form6" />
         <activity android:name=".treatment_details_form5" />
-        <activity android:name=".FillChoice" />
+        <activity android:name=".FillChoice" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="asha.dshm.asha2.ActivityChoice" />
+        </activity>
         <activity android:name=".UpdateRecord">
-
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="asha.dshm.asha2.FillChoice" />
         </activity>
         <activity android:name=".ChangeLanguage">
             <intent-filter>
