@@ -167,8 +167,15 @@ public class Family_Details extends AppCompatActivity implements AdapterView.OnI
         immunisation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Family_Details.this,Form6.class);
+//                Intent intent = new Intent(Family_Details.this,Form6.class);
+//                startActivity(intent);
+
+                if(immunisation.isChecked()){
+                    Intent intent = new Intent(Family_Details.this,Form6.class);
                 startActivity(intent);
+                }else{
+//                    System.out.println("Un-Checked");
+                }
 
             }
         });
@@ -176,8 +183,14 @@ public class Family_Details extends AppCompatActivity implements AdapterView.OnI
         rntcp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Family_Details.this,Form5.class);
-                startActivity(intent);
+//                Intent intent = new Intent(Family_Details.this,Form5.class);
+//                startActivity(intent);
+                if(rntcp.isChecked()){
+                    Intent intent = new Intent(Family_Details.this,Form6.class);
+                    startActivity(intent);
+                }else{
+//                    System.out.println("Un-Checked");
+                }
 
             }
         });
