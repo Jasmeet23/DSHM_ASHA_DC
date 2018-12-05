@@ -3,25 +3,74 @@ package asha.dshm.asha2.Java;
 import java.util.ArrayList;
 
 public class FamilyRecord {
-    ArrayList<FamilyMember> familyMembers;
-    String nameASHA;
-    String nameANM;
-    String areaCode;
-    FamilyMember head;
-    String address;
-    String familyID;
+    private String asha;
+    private String family_id;
+    private String anm;
+    private int area_code;
+    private String name_head_of_family;
+    private String address;
 
-    public FamilyRecord(String nameASHA, String nameANM, String areaCode, FamilyMember head, String address, String familyID) {
-        this.nameASHA = nameASHA;
-        this.nameANM = nameANM;
-        this.areaCode = areaCode;
-        this.head = head;
+    public String getAsha() {
+        return asha;
+    }
+
+    public void setAsha(String asha) {
+        this.asha = asha;
+    }
+
+    public String getFamilyID() {
+        return family_id;
+    }
+
+    public void setFamilyID(String familyID) {
+        this.family_id = familyID;
+    }
+
+    public String getAnm() {
+        return anm;
+    }
+
+    public void setAnm(String anm) {
+        this.anm = anm;
+    }
+
+    public int getArea_code() {
+        return area_code;
+    }
+
+    public void setArea_code(int area_code) {
+        this.area_code = area_code;
+    }
+
+    public String getName_head_of_family() {
+        return name_head_of_family;
+    }
+
+    public void setName_head_of_family(String name_head_of_family) {
+        this.name_head_of_family = name_head_of_family;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
         this.address = address;
-        this.familyID = familyID;
+    }
+
+    public FamilyRecord(String asha, String familyID, String anm, int area_code, String name_head_of_family, String address) {
+
+        this.asha = asha;
+        this.family_id = familyID;
+        this.anm = anm;
+        this.area_code = area_code;
+        this.name_head_of_family = name_head_of_family;
+        this.address = address;
     }
 
     @Override
     public String toString() {
-        return "Family Head Name:"+this.head.name +"\nANM name: " +this.nameANM + "\nASHA name: " + this.nameASHA + "\nArea Code: " + this.areaCode + "\nAddress:" + this.address + "\nFamily ID: " + this.familyID;
+        return "Family Head Name:"+this.name_head_of_family +"\nANM name: " +this.anm + "\nASHA name: " + this.asha + "\nArea Code: " + this.area_code + "\nAddress:" + this.address + "\nFamily ID: " + this.family_id;
     }
+
 }

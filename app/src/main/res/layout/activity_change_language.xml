@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:padding="50dp"
+    app:layout_anchorGravity="center_vertical"
+    tools:context="asha.dshm.asha2.ChangeLanguage">
+
+    <TextView
+        android:id="@+id/txt"
+        android:layout_width="match_parent"
+        android:layout_height="68dp"
+        android:layout_gravity="center_vertical"
+        android:foregroundGravity="center_vertical"
+        android:gravity="center_vertical"
+        android:text="Choose Language"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/buttonColor"
+        android:fontFamily="casual"
+        android:foregroundGravity="center_vertical"
+        android:gravity="center_vertical|center_horizontal"
+        android:layoutDirection="inherit"
+        android:text="English"
+        app:layout_constraintTop_toBottomOf="@+id/button2"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_gravity="center_vertical"
+        android:background="@color/buttonColor"
+        android:fontFamily="casual"
+        android:foregroundGravity="center_vertical"
+        android:gravity="center_vertical|center_horizontal"
+        android:shadowColor="@color/colorPrimaryDark"
+        android:text="Hindi"
+        app:layout_constraintTop_toBottomOf="@+id/txt"
+        tools:layout_editor_absoluteX="148dp" />
+
+</LinearLayout>

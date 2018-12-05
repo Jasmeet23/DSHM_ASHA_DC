@@ -27,9 +27,9 @@
                 android:foregroundGravity="center_vertical|center_horizontal|center"
                 android:gravity="center"
                 android:text="@string/family"
-                android:theme="@style/CustomText"
                 android:textSize="50dp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:theme="@style/CustomText" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -45,10 +45,10 @@
                     android:text="@string/sn" />
 
                 <EditText
+                    android:id="@+id/E_SN"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/E_SN"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1" />
 
             </LinearLayout>
 
@@ -67,10 +67,10 @@
                     android:text="@string/Name" />
 
                 <EditText
+                    android:id="@+id/E_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/E_name"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1" />
 
             </LinearLayout>
 
@@ -89,11 +89,10 @@
 
 
                 <Spinner
+                    android:id="@+id/gender_array"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/gender_array"
                     android:layout_weight="1"></Spinner>
-
 
 
             </LinearLayout>
@@ -118,6 +117,7 @@
                     android:layout_marginLeft="70dp"
                     android:background="@android:color/transparent"
                     app:srcCompat="@drawable/calendar" />
+
                 <TextView
                     android:id="@+id/E_Date"
                     android:layout_width="wrap_content"
@@ -141,10 +141,10 @@
                     android:text="@string/age" />
 
                 <TextView
+                    android:id="@+id/E_age"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/E_age"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1" />
 
             </LinearLayout>
 
@@ -162,10 +162,10 @@
                     android:text="@string/aadhar" />
 
                 <EditText
+                    android:id="@+id/E_aadhar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/E_aadhar"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1" />
 
             </LinearLayout>
 
@@ -184,9 +184,9 @@
                     android:text="@string/occupation" />
 
                 <Spinner
+                    android:id="@+id/occupation_array"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/occupation_array"
                     android:layout_weight="1"></Spinner>
 
             </LinearLayout>
@@ -205,9 +205,9 @@
                     android:text="@string/marital_status" />
 
                 <Spinner
+                    android:id="@+id/marital_array"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/marital_array"
                     android:layout_weight="1"></Spinner>
 
             </LinearLayout>
@@ -226,63 +226,61 @@
                     android:layout_weight="1"
                     android:text="@string/potential_problems" />
 
-               <LinearLayout
-                   android:layout_width="match_parent"
-                   android:layout_height="wrap_content"
-                   android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-                   <CheckBox
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:id="@+id/immunisation"
-                       android:text="@string/immunisation"/>
+                    <CheckBox
+                        android:id="@+id/immunisation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/immunisation" />
 
-                   <CheckBox
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:id="@+id/nutrition"
-                       android:text="@string/Nutrition"/>
+                    <CheckBox
+                        android:id="@+id/nutrition"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Nutrition" />
 
-                   <CheckBox
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:id="@+id/pregnancy"
-                       android:text="@string/pregnancy_reg"/>
+                    <CheckBox
+                        android:id="@+id/pregnancy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/pregnancy_reg" />
 
-                   <CheckBox
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:id="@+id/nc"
-                       android:text="@string/non_communicable"/>
+                    <CheckBox
+                        android:id="@+id/nc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/non_communicable" />
 
-                   <CheckBox
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:id="@+id/visual"
-                       android:text="@string/visual"/>
+                    <CheckBox
+                        android:id="@+id/visual"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/visual" />
 
-                   <CheckBox
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:id="@+id/rntcp"
-                       android:text="@string/RNTCP"/>
+                    <CheckBox
+                        android:id="@+id/rntcp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/RNTCP" />
 
-                   <CheckBox
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:id="@+id/disability"
-                       android:text="@string/disability"/>
+                    <CheckBox
+                        android:id="@+id/disability"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/disability" />
 
-                   <CheckBox
-                       android:layout_width="wrap_content"
-                       android:layout_height="wrap_content"
-                       android:id="@+id/mortality"
-                       android:text="@string/mortality"/>
-               </LinearLayout>
+                    <CheckBox
+                        android:id="@+id/mortality"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mortality" />
+                </LinearLayout>
 
             </LinearLayout>
-
-
 
 
             <RelativeLayout
@@ -299,12 +297,19 @@
                     android:layout_centerHorizontal="true"
                     android:layout_gravity="right"
                     android:background="@color/buttonColor"
-                    android:text="@string/save_form"
-                    />
+                    android:text="@string/save_form" />
             </RelativeLayout>
         </LinearLayout>
 
 
     </ScrollView>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        app:layout_collapseMode="pin"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
 
 </android.support.constraint.ConstraintLayout>

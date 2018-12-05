@@ -52,23 +52,23 @@
                     android:text="@string/tb_sym1" />
 
                 <RadioGroup
+                    android:id="@+id/cough"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:id="@+id/cough"
                     android:gravity="center"
                     android:orientation="horizontal">
 
                     <RadioButton
+                        android:id="@+id/cough_n"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/cough_n"
                         android:text="@string/yes" />
 
                     <RadioButton
+                        android:id="@+id/cough_y"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/cough_y"
                         android:text="@string/no" />
                 </RadioGroup>
             </LinearLayout>
@@ -88,23 +88,23 @@
                     android:text="@string/tb_sym2" />
 
                 <RadioGroup
+                    android:id="@+id/fever"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:id="@+id/fever"
                     android:gravity="center"
                     android:orientation="horizontal">
 
                     <RadioButton
+                        android:id="@+id/fever_y"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/fever_y"
                         android:text="@string/yes" />
 
                     <RadioButton
+                        android:id="@+id/fever_n"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/fever_n"
                         android:text="@string/no" />
                 </RadioGroup>
 
@@ -125,23 +125,23 @@
                     android:text="@string/tb_sym3" />
 
                 <RadioGroup
+                    android:id="@+id/appetite"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:id="@+id/appetite"
                     android:gravity="center"
                     android:orientation="horizontal">
 
                     <RadioButton
+                        android:id="@+id/appetite_y"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/appetite_y"
                         android:text="@string/yes" />
 
                     <RadioButton
+                        android:id="@+id/appetite_n"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/appetite_n"
                         android:text="@string/no" />
                 </RadioGroup>
 
@@ -163,23 +163,23 @@
                     android:text="@string/tb_sym5" />
 
                 <RadioGroup
+                    android:id="@+id/sputum"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:id="@+id/sputum"
                     android:gravity="center"
                     android:orientation="horizontal">
 
                     <RadioButton
+                        android:id="@+id/sputum_y"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/sputum_y"
                         android:text="@string/yes" />
 
                     <RadioButton
+                        android:id="@+id/sputum_n"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/sputum_n"
                         android:text="@string/no" />
                 </RadioGroup>
 
@@ -201,23 +201,23 @@
                     android:text="@string/tb_sym6" />
 
                 <RadioGroup
+                    android:id="@+id/chestpain"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:id="@+id/chestpain"
                     android:gravity="center"
                     android:orientation="horizontal">
 
                     <RadioButton
+                        android:id="@+id/chestpain_y"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/chestpain_y"
                         android:text="@string/yes" />
 
                     <RadioButton
+                        android:id="@+id/chestpain_n"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/chestpain_n"
                         android:text="@string/no" />
                 </RadioGroup>
 
@@ -239,23 +239,23 @@
                     android:text="@string/tb_sym7" />
 
                 <RadioGroup
+                    android:id="@+id/tb_history"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:id="@+id/tb_history"
-                    android:orientation="horizontal"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:orientation="horizontal">
 
                     <RadioButton
+                        android:id="@+id/tb_history_y"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/tb_history_y"
                         android:text="@string/yes" />
 
                     <RadioButton
+                        android:id="@+id/tb_history_n"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/tb_history_n"
                         android:text="@string/no" />
                 </RadioGroup>
 
@@ -275,34 +275,35 @@
                     android:text="@string/treatment_Status" />
 
                 <RadioGroup
+                    android:id="@+id/tb_Treatment_status"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:id="@+id/tb_Treatment_status"
                     android:orientation="vertical">
 
                     <RadioButton
+                        android:id="@+id/tb_treat_complete"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="0.25"
-                        android:id="@+id/tb_treat_complete"
                         android:text="@string/treatment_complete" />
 
                     <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
                         android:id="@+id/tb_treat_incomplete"
-                        android:text="@string/treatment_incomplete" />
-                    <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:text="@string/treatment_incomplete" />
+
+                    <RadioButton
                         android:id="@+id/tb_treat_notstarted"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="@string/treatment_notstarted" />
 
                     <RadioButton
+                        android:id="@+id/tb_treat_on"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/tb_treat_on"
                         android:text="@string/treatment_on" />
                 </RadioGroup>
 
@@ -322,9 +323,16 @@
                     android:layout_centerHorizontal="true"
                     android:layout_gravity="right"
                     android:background="@color/buttonColor"
-                    android:text="@string/save"
-                    />
+                    android:text="@string/save" />
             </RelativeLayout>
         </LinearLayout>
     </ScrollView>
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        app:layout_collapseMode="pin"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
 </android.support.constraint.ConstraintLayout>

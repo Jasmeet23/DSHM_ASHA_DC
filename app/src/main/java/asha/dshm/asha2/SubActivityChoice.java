@@ -38,9 +38,12 @@ public class SubActivityChoice extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choice);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
-//        initCollapsingToolbar();
+        initCollapsingToolbar();
 
         mFormChoiceList = (RecyclerView) findViewById(R.id.recycler_view);
 

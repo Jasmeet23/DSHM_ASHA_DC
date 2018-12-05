@@ -8,11 +8,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Filterable;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import asha.dshm.asha2.CustomFilter;
 import asha.dshm.asha2.Java.FamilyRecord;
@@ -29,17 +27,29 @@ public class FamilyRecordAdapter extends RecyclerView.Adapter<FamilyRecordAdapte
         this.mContext = mContext;
         this.familyRecordList = familyRecordList;
         this.mNumberItems = mNumberItems;
-        this.filterList=familyRecordList;
+        this.filterList = familyRecordList;
     }
 
+    public ArrayList<FamilyRecord> getFamilyRecordList() {
+        return familyRecordList;
+    }
+
+    public void setFamilyRecordList(ArrayList<FamilyRecord> familyRecordList) {
+        this.familyRecordList = familyRecordList;
+    }
 
     public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-        TextView record;
+        TextView family_head, areaCode, address, familyID;
+        ImageView im;
 
         public MyViewHolder(View view) {
             super(view);
-            record = (TextView) view.findViewById(R.id.family_item);
+            family_head = (TextView) view.findViewById(R.id.family_head);
+            address = (TextView) view.findViewById(R.id.address);
+            familyID = (TextView) view.findViewById(R.id.family_id);
+            im=(ImageView)view.findViewById(R.id.im);
+im.setImageResource(R.drawable.ic_home_black_24dp);
             view.setOnClickListener(this);
         }
 
@@ -52,7 +62,7 @@ public class FamilyRecordAdapter extends RecyclerView.Adapter<FamilyRecordAdapte
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         Context context = parent.getContext();
-        int layoutIDForListItem = R.layout.item_family;
+        int layoutIDForListItem = R.layout.family_profile_item;
         LayoutInflater inflater = LayoutInflater.from(context);
         boolean shouldAttachToParentImmediately = false;
         View itemView = inflater.inflate(layoutIDForListItem, parent, shouldAttachToParentImmediately);
@@ -61,9 +71,12 @@ public class FamilyRecordAdapter extends RecyclerView.Adapter<FamilyRecordAdapte
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
+
         final FamilyRecord family = familyRecordList.get(position);
         Log.d("fam", family.toString());
-        holder.record.setText(family.toString());
+        holder.family_head.setText("Family Head name: " + family.getName_head_of_family());
+        holder.address.setText("Address: " + (family.getAddress()));
+        holder.familyID.setText("Family ID: " + family.getFamilyID());
     }
 
     @Override
@@ -76,7 +89,7 @@ public class FamilyRecordAdapter extends RecyclerView.Adapter<FamilyRecordAdapte
         if (filter == null) {
             filter = new CustomFilter(filterList, this);
         }
-
         return filter;
     }
+
 }

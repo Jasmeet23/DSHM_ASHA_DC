@@ -8,15 +8,15 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="10dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="0dp"
         tools:layout_editor_absoluteX="50dp"
         tools:layout_editor_absoluteY="50dp">
 
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
@@ -26,171 +26,117 @@
                 android:layout_marginBottom="20dp"
                 android:foregroundGravity="center_vertical|center_horizontal|center"
                 android:gravity="center"
-                android:theme="@style/CustomText"
                 android:text="@string/form2"
                 android:textSize="50dp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:theme="@style/CustomText" />
 
             <LinearLayout
+                android:layout_margin="10dp"
                 android:layout_width="match_parent"
-                android:layout_weight="1"
                 android:layout_height="0dp"
+                android:layout_weight="1"
                 android:orientation="horizontal">
 
                 <TextView
-                    android:id="@+id/updation"
+                    android:id="@+id/members"
                     style="@style/CustomText"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="@string/Updation_date" />
+                    android:text="Number of members" />
 
-                <android.support.v7.widget.AppCompatImageButton
-                    android:id="@+id/calendar"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:background="@android:color/transparent"
-                    app:srcCompat="@drawable/calendar" />
                 <TextView
-                    android:id="@+id/E_Date"
+                    android:id="@+id/memvals"
                     android:layout_width="0dp"
-                    android:layout_marginTop="9dp"
-                    android:theme="@style/CustomText"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:ems="10" />
+                    android:text="Number " />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_margin="10dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/males"
+                    style="@style/CustomText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Number of males" />
+
+                <TextView
+                    android:id="@+id/malevals"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Number " />
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_margin="10dp"
+
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/females"
+                    style="@style/CustomText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Number of females" />
+
+                <TextView
+                    android:id="@+id/fevals"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Number " />
 
             </LinearLayout>
 
-            <!--<LinearLayout-->
-                <!--android:layout_weight="1"-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="0dp"-->
-                <!--android:orientation="vertical"-->
-                <!--android:id="@+id/fam_Details">-->
 
 
-
-
-
-                    <!--<android.support.v7.widget.AppCompatImageButton-->
-                        <!--android:id="@+id/add"-->
-                        <!--android:layout_width="wrap_content"-->
-                        <!--android:layout_height="wrap_content"-->
-                        <!--android:layout_marginLeft="70dp"-->
-                        <!--android:background="@android:color/transparent"-->
-                        <!--app:srcCompat="@drawable/plus"/>-->
-            <!--</LinearLayout>-->
-
-<android.support.v7.widget.RecyclerView
-    android:layout_width="match_parent"
-    android:layout_weight="1"
-    android:layout_height="0dp">
-
-</android.support.v7.widget.RecyclerView>
-
-            <android.support.design.widget.FloatingActionButton
-
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/add"
-                app:fabSize="normal"
-                android:src="@drawable/ic_add_black_24dp"
-                android:layout_margin="16dp"
-                android:layout_gravity="right"
-                android:background="@color/buttonColor"
-                android:text="@string/family_details"
-                android:textAlignment="center" />
         </LinearLayout>
-
-
     </ScrollView>
 
+    <android.support.design.widget.FloatingActionButton
+
+        android:id="@+id/add"
+        android:layout_width="189dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/buttonColor"
+        android:src="@drawable/ic_add_black_24dp"
+        android:text="@string/family_details"
+        android:textAlignment="center"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.974"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.983" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        app:layout_collapseMode="pin"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+
 </android.support.constraint.ConstraintLayout>
-            <!--<LinearLayout-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:orientation="horizontal">-->
-
-                <!--<TextView-->
-                    <!--android:id="@+id/no_family_members"-->
-                    <!--style="@style/CustomText"-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_weight="1"-->
-                    <!--android:text="@string/No_family_members" />-->
-
-                <!--<Spinner-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:id="@+id/number_member_array"-->
-                    <!--android:layout_weight="1"/>-->
-
-            <!--</LinearLayout>-->
-
-            <!--<LinearLayout-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:orientation="vertical">-->
-
-                <!--<TextView-->
-                    <!--android:id="@+id/sex"-->
-                    <!--style="@style/CustomText"-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_weight="1"-->
-                    <!--android:text="@string/Sex" />-->
-                <!--<LinearLayout-->
-                    <!--android:layout_width="match_parent"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:orientation="vertical">-->
-
-            <!--<LinearLayout-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:orientation="horizontal">-->
-
-                <!--<TextView-->
-                    <!--android:id="@+id/male"-->
-                    <!--style="@style/CustomText"-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_weight="1"-->
-                    <!--android:text="@string/Male" />-->
-
-                <!--<Spinner-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:id="@+id/male_array"-->
-                    <!--android:layout_weight="1"/>-->
-
-
-            <!--</LinearLayout>-->
-
-            <!--<LinearLayout-->
-                <!--android:layout_width="match_parent"-->
-                <!--android:layout_height="wrap_content"-->
-                <!--android:orientation="horizontal">-->
-
-                <!--<TextView-->
-                    <!--android:id="@+id/female"-->
-                    <!--style="@style/CustomText"-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:layout_weight="1"-->
-                    <!--android:text="@string/Female" />-->
-
-                <!--<Spinner-->
-                    <!--android:layout_width="wrap_content"-->
-                    <!--android:layout_height="wrap_content"-->
-                    <!--android:id="@+id/female_array"-->
-                    <!--android:layout_weight="1"/>-->
-
-
-            <!--</LinearLayout>-->
-
-                <!--</LinearLayout>-->
-            <!--</LinearLayout>-->
-

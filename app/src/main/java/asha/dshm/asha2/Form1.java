@@ -3,7 +3,9 @@ package asha.dshm.asha2;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -29,6 +31,12 @@ public class Form1 extends AppCompatActivity implements AdapterView.OnItemSelect
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form1);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
 
         next = (Button) findViewById(R.id.save);
         next.setOnClickListener(this);
@@ -109,6 +117,19 @@ public class Form1 extends AppCompatActivity implements AdapterView.OnItemSelect
 
 
     @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch (id) {
+            // Respond to the action bar's Up/Home button
+            case android.R.id.home:
+                //NavUtils.navigateUpFromSameTask(this);
+                onBackPressed();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
 
     }
@@ -161,7 +182,7 @@ public class Form1 extends AppCompatActivity implements AdapterView.OnItemSelect
         }
 
         return apii.basicAmenities(
-                42 + "",
+                51 + "",
                 a[0]+"",
                 a[1]+"",
                 Integer.parseInt(spinner_rooms.getSelectedItem().toString()),

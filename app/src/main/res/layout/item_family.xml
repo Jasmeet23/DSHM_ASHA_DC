@@ -4,13 +4,23 @@
     android:layout_height="wrap_content">
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:paddingBottom="10dp"
+            android:layout_weight="1"
+            android:id="@+id/ident"
+            style="@style/CustomTextS"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:paddingBottom="10dp"
+            android:layout_weight="1"
             android:id="@+id/family_item"
-            style="@style/CustomText"/>
+            style="@style/CustomTextS"/>
+
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

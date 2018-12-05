@@ -3,7 +3,9 @@ package asha.dshm.asha2;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
@@ -23,6 +25,12 @@ public class Form4 extends AppCompatActivity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form4);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setHomeButtonEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+
         next = (Button) findViewById(R.id.save);
         next.setOnClickListener(this);
 
@@ -32,6 +40,19 @@ public class Form4 extends AppCompatActivity implements View.OnClickListener {
         radioGroup4 = (RadioGroup) findViewById(R.id.pds);
 
     }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch (id) {
+            // Respond to the action bar's Up/Home button
+            case android.R.id.home:
+                //NavUtils.navigateUpFromSameTask(this);
+                onBackPressed();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
+    }
+
 
     @Override
     public void onClick(View v) {
@@ -70,6 +91,6 @@ public class Form4 extends AppCompatActivity implements View.OnClickListener {
         Boolean pds = radioButton4.getText().toString().trim().compareTo("YES") == 0;
 
 
-        return apii.otherService(42+"",anganwadi, cats, disability, pds);
+        return apii.otherService(50+"",anganwadi, cats, disability, pds);
     }
 }

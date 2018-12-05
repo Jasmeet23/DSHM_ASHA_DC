@@ -51,7 +51,7 @@
                     android:id="@+id/house_type_array"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1" />
 
             </LinearLayout>
 
@@ -73,7 +73,7 @@
                     android:id="@+id/ownership_array"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1" />
 
             </LinearLayout>
 
@@ -95,7 +95,7 @@
                     android:id="@+id/rooms_array"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1" />
 
 
             </LinearLayout>
@@ -187,7 +187,7 @@
                     android:id="@+id/water_source_array"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1" />
 
 
             </LinearLayout>
@@ -210,7 +210,7 @@
                     android:id="@+id/wheeler_array"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1" />
 
 
             </LinearLayout>
@@ -233,7 +233,7 @@
                     android:id="@+id/toilet_array"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1" />
 
 
             </LinearLayout>
@@ -291,7 +291,7 @@
                     android:id="@+id/drainage_array"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1" />
 
 
             </LinearLayout>
@@ -314,7 +314,7 @@
                     android:id="@+id/garbage_array"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"/>
+                    android:layout_weight="1" />
             </LinearLayout>
 
             <RelativeLayout
@@ -331,13 +331,19 @@
                     android:layout_centerHorizontal="true"
                     android:layout_gravity="right"
                     android:background="@color/buttonColor"
-                    android:text="@string/Savenext"
-                    />
+                    android:text="@string/Savenext" />
             </RelativeLayout>
 
         </LinearLayout>
 
 
     </ScrollView>
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        app:layout_collapseMode="pin"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
 
 </android.support.constraint.ConstraintLayout>

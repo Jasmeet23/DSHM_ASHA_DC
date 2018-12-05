@@ -1,85 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">ASHA</string>
-    <string name="title_activity_login">Sign in</string>
+    <string name="app_name">आशा</string>
+    <string name="title_activity_login">साइन इन करें</string>
 
     <!-- Strings related to login -->
-    <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password (optional)</string>
+    <string name="prompt_email">ईमेल</string>
+    <string name="prompt_password">पासवर्ड </string>
     <string name="action_sign_in">Sign in or register</string>
-    <string name="action_sign_in_short">Sign in</string>
-    <string name="error_invalid_email">This email address is invalid</string>
-    <string name="error_invalid_password">This password is too short</string>
-    <string name="error_incorrect_password">This password is incorrect</string>
-    <string name="error_field_required">This field is required</string>
-    <string name="permission_rationale">"Contacts permissions are needed for providing email
-        completions."
+    <string name="action_sign_in_short">साइन इन करें</string>
+    <string name="error_invalid_email">यह ईमेल पता अमान्य है</string>
+    <string name="error_invalid_password">यह पासवर्ड बहुत छोटा है</string>
+    <string name="error_incorrect_password">यह पासवर्ड गलत है</string>
+    <string name="error_field_required">यह फ़ील्ड आवश्यक है</string>
+    <string name="permission_rationale">"ईमेल पूर्णता प्रदान करने के लिए संपर्क अनुमतियां आवश्यक हैं"
     </string>
 
-    <string name="title">Choose Language</string>
-    <string name="hin">Hindi</string>
-    <string name="eng">English</string>
+    <string name = "title"> भाषा चुनें </string>
+    <string name = "hin"> हिंदी </string>
+    <string name = "eng"> अंग्रेज़ी </string>
 
 
-    <string name="save">Save</string>
-    <string name="Savenext">Save and Next</string>
+    <string name = "save"> सहेजें </string>
+    <string name = "Savenext"> सहेजें और आगे बढ़ें </string>
 
     <!--Choice of Survey-->
-    <string name="update">Update Existing Record</string>
-    <string name="rntcp">Show Rntcp</string>
-    <string name="newEntry">Register New Family</string>
-    <string name="reSurvey">ReSurvey</string>
+    <string name = "update"> मौजूदा रिकॉर्ड अपडेट करें </string>
+    <string name = "newEntry"> नया परिवार पंजीकृत करें </string>
+    <string name = "reSurvey"> फिर से सर्वेक्षण करें </string>
 
     <!--Activity Choices-->
-    <string name="ActivityHeading">Activities</string>
-    <string name="ActivitySubHeading">Please Choose the Category</string>
-    <string name="form1">Basic Amenities</string>
-    <string name="form2">Family Member Details</string>
-    <string name="form3">Family Profile</string>
-    <string name="form4">Other service provision</string>
-    <string name="form5">Tuberculosis</string>
+    <string name = "ActivityHeading"> क्रियाएँ </string>
+    <string name = "ActivitySubHeading"> कृपया श्रेणी चुनें </string>
+    <string name = "form1"> मूलभूत सुविधाएं </string>
+    <string name = "form2"> पारिवारिक सदस्य विवरण </string>
+    <string name = "form3"> पारिवारिक प्रोफ़ाइल </string>
+    <string name = "form4"> अन्य सेवा प्रावधान </string>
+    <string name  = "form5"> कट्यूबरक्लोसिस </string>
 
 
     <!--subheadings-->
-    <string name="tb_symp">Symptoms of the disease:</string>
+    <string name="tb_symp">रोग के लक्षण:</string>
 
 
     <!--Sub Activity Choices-->
-    <string name="Act1">Household Survey</string>
-    <string name="Act2">NCD Survey</string>
-    <string name="Act3">ANC</string>
-    <string name="Act4">Family Planning</string>
-    <string name="Act5">Incentives</string>
-    <string name="Act6">Option 6</string>
-    <string name="Act7">Option 7</string>
-    <string name="Act8">Option 8</string>
+    <string name = "Act1"> घरेलू सर्वेक्षण </string>
+    <string name = "Act2"> एनसीडी सर्वेक्षण </string>
+    <string name  = "Act3"> एएनसी </string>
+    <string name = "Act4"> पारिवारिक योजना </string>
+    <string name = "Act5"> प्रोत्साहन </string>
+    <string name = "Act6"> विकल्प 6 </string>
+    <string name = "Act7"> विकल्प 7 </string>
+    <string name = "Act8"> विकल्प 8 </string>
 
 
     <!--Basic Amenities-->
-    <string name="bA1">House Type</string>
-    <string name="bA2">Ownership</string>
-    <string name="bA3">No. of Rooms</string>
-    <string name="bA4">Is there separate room? </string>
-    <string name="bA5">Electricity</string>
-    <string name="bA6">Water Source</string>
-    <string name="bA7">Vehicle</string>
-    <string name="bA8">Toilet Facility</string>
-    <string name="bA9">Water Availability in Toilet</string>
-    <string name="bA10">Drainage</string>
-    <string name="bA11">Garbage Disposed</string>
+    <string name = "bA1"> घर का प्रकार </string>
+    <string name = "bA2"> स्वामित्व </string>
+    <string name = "bA3"> कमरों की संख्या </string>
+    <string name = "bA4"> क्या कोई अलग कमरा है? </string>
+    <string name = "bA5"> पावर </string>
+    <string name = "bA6"> जल स्रोत </string>
+    <string name = "bA7"> वाहन </string>
+    <string name = "bA8"> शौचालय सुविधा </string>
+    <string name = "bA9"> शौचालयों में पानी की उपलब्धता </string>
+    <string name = "bA10"> ड्रेनेज </string>
+    <string name = "bA11"> कचरा निपटान </string>
+
 
 
     <string-array name="house_type_array">
-        <item>Kachha</item>
-        <item>Pakka</item>
-        <item>Semi-Pakka</item>
-        <item>Jhuggi</item>
-        <item>Homeless</item>
+        <item> कच्चा </item>
+        <item> पक्का </item>
+        <item> अर्ध पक्का </item>
+        <item> झुग्गी </item>
+        <item> बेघर </item>
     </string-array>
 
     <string-array name="ownership_array">
-        <item>Rented</item>
-        <item>Own</item>
-        <item>Government</item>
+        <item> किराए पर</item>
+        <item>अपना</item>
+        <item>सरकारी</item>
     </string-array>
 
     <string-array name="rooms_array">
@@ -138,7 +138,7 @@
 
     <!--Family Member Details-->
     <string name="Updation_date">Date of Updation</string>
-    <string name="family_details">Add family member</string>
+    <string name="family_details">Add family details</string>
     <string name="No_family_members">Number of family members</string>
     <string name="Sex">Sex</string>
     <string name="Male">Male</string>
@@ -183,7 +183,7 @@
     <string name="fp3">"Name of Health Facility"</string>
     <string name="fp4">"Area Code"</string>
     <string name="fp5">"Area Description"</string>
-    <string name="fp6">"Date of Survey"</string>
+    <string name="fp6">"Data of Survey"</string>
     <string name="fp7">"Name of Head of Family"</string>
     <string name="fp8">"Address"</string>
     <string name="fp9">"Pin Code"</string>
