@@ -10,12 +10,15 @@ import android.widget.Button;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.preference.PreferenceManager;
+import android.widget.TextView;
+
 import java.util.Locale;
 
 public class FillChoice extends AppCompatActivity implements View.OnClickListener {
 
-    Button regNew, update, reSurvey, rntcp;
+    TextView regNew, update, reSurvey, rntcp;
     static String lan = "en_US";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,10 +30,10 @@ public class FillChoice extends AppCompatActivity implements View.OnClickListene
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
 
-        regNew = (Button) findViewById(R.id.regNew);
-        update = (Button) findViewById(R.id.updateOld);
-        reSurvey = (Button) findViewById(R.id.reSurvey);
-        rntcp = (Button) findViewById(R.id.rntcpShow);
+        regNew = (TextView) findViewById(R.id.regNew);
+        update = (TextView) findViewById(R.id.updateOld);
+        reSurvey = (TextView) findViewById(R.id.reSurvey);
+        rntcp = (TextView) findViewById(R.id.rntcpShow);
         regNew.setOnClickListener(this);
         update.setOnClickListener(this);
         reSurvey.setOnClickListener(this);
@@ -54,6 +57,7 @@ public class FillChoice extends AppCompatActivity implements View.OnClickListene
             getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
         }
     }
+
     private void setLangRecreate(String langval) {
         Configuration config = getBaseContext().getResources().getConfiguration();
         Locale locale = new Locale(langval);

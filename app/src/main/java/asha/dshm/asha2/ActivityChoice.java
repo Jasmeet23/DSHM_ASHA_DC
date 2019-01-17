@@ -12,6 +12,7 @@ import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.util.TypedValue;
@@ -50,7 +51,7 @@ public class ActivityChoice extends AppCompatActivity
 
         albumList = new ArrayList<>();
         adapter = new FormChoiceAdapter(albumList, NUM_FORM_ITEMS, this);
-        RecyclerView.LayoutManager mLayoutManager = new GridLayoutManager(this, 2);
+        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this);
         mFormChoiceList.setHasFixedSize(true);
         mFormChoiceList.setLayoutManager(mLayoutManager);
         mFormChoiceList.addItemDecoration(new GridSpacingItemDecoration(2, dpToPx(10), true));
@@ -138,14 +139,14 @@ public class ActivityChoice extends AppCompatActivity
      */
     private void prepareAlbums() {
         int[] covers = new int[]{
-                R.drawable.ic_launcher_background,
-                R.drawable.ic_launcher_background,
-                R.drawable.ic_launcher_background,
-                R.drawable.ic_launcher_background,
-                R.drawable.ic_launcher_background,
-                R.drawable.ic_launcher_background,
-                R.drawable.ic_launcher_background,
-                R.drawable.ic_launcher_background,
+                R.drawable.icons8_home_50,
+                R.drawable.icons8_pills_64,
+                R.drawable.icons8_pregnant_96,
+                R.drawable.icons8_family_64,
+                R.drawable.icons8_prize_64,
+                R.drawable.icons8_stethoscope_64,
+                R.drawable.icons8_stethoscope_64,
+                R.drawable.icons8_stethoscope_64,
 //                R.drawable.sanitation,
 //                R.drawable.senior,
 //                R.drawable.malnourished,

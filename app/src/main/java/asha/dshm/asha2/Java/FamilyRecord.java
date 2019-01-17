@@ -70,7 +70,7 @@ public class FamilyRecord {
 
     @Override
     public String toString() {
-        return "Family Head Name:"+this.name_head_of_family +"\nANM name: " +this.anm + "\nASHA name: " + this.asha + "\nArea Code: " + this.area_code + "\nAddress:" + this.address + "\nFamily ID: " + this.family_id;
+        return "Family Head Name:"+this.name_head_of_family +"\nANM name: " +this.anm + "\nasha name: " + this.asha + "\nArea Code: " + this.area_code + "\nAddress:" + this.address + "\nFamily ID: " + this.family_id;
     }
 
 }

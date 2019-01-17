@@ -26,14 +26,14 @@ public class FormChoiceAdapter extends RecyclerView.Adapter<FormChoiceAdapter.My
 
 
     public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
-        public TextView title, count;
+        public TextView title;
         public ImageView thumbnail, overflow;
         RelativeLayout holderLayout;
 
         public MyViewHolder(View view) {
             super(view);
             title = (TextView) view.findViewById(R.id.title);
-            count = (TextView) view.findViewById(R.id.count);
+//            count = (TextView) view.findViewById(R.id.count);
             thumbnail = (ImageView) view.findViewById(R.id.thumbnail);
             holderLayout = (RelativeLayout) view.findViewById(R.id.holderLayout);
             view.setOnClickListener(this);
@@ -67,7 +67,7 @@ public class FormChoiceAdapter extends RecyclerView.Adapter<FormChoiceAdapter.My
     public void onBindViewHolder(final MyViewHolder holder, final int position) {
         final SubActivityDetails album = albumList.get(position);
         holder.title.setText(album.getName());
-        holder.count.setText(album.getId() + "");
+//        holder.count.setText(album.getId() + "");
         holder.thumbnail.setImageResource(album.getImage());
 
 
@@ -81,51 +81,5 @@ public class FormChoiceAdapter extends RecyclerView.Adapter<FormChoiceAdapter.My
     public interface ListItemClickListener {
         void onListItemClick(View v, int clickedListItem);
     }
-
-
-//                else if( holder.title.getText().toString().equalsIgnoreCase(mContext.getResources().getString(R.string.maternalHealth)))
-//                {
-//                    Intent subActivityIntent = new Intent(mContext, SubActivityChoice.class);
-//                    subActivityIntent.putExtra("ID", mContext.getResources().getString(R.string.maternalHealth));
-//                    mContext.startActivity(subActivityIntent);
-//
-//                }
-//                else if( holder.title.getText().toString().equalsIgnoreCase(mContext.getResources().getString(R.string.familyPlanning)))
-//                {
-//                    Intent subActivityIntent = new Intent(mContext, SubActivityChoice.class);
-//                    subActivityIntent.putExtra("ID", mContext.getResources().getString(R.string.familyPlanning));
-//                    mContext.startActivity(subActivityIntent);
-//
-//                }
-//                else if( holder.title.getText().toString().equalsIgnoreCase(mContext.getResources().getString(R.string.IEC)))
-//                {
-//                    Intent subActivityIntent = new Intent(mContext, SubActivityChoice.class);
-//                    subActivityIntent.putExtra("ID", mContext.getResources().getString(R.string.IEC));
-//                    mContext.startActivity(subActivityIntent);
-//
-//                }
-//                else if( holder.title.getText().toString().equalsIgnoreCase(mContext.getResources().getString(R.string.TB)))
-//                {
-//                    Intent subActivityIntent = new Intent(mContext, SubActivityChoice.class);
-//                    subActivityIntent.putExtra("ID", mContext.getResources().getString(R.string.TB));
-//                    mContext.startActivity(subActivityIntent);
-//
-//                }
-//                else if( holder.title.getText().toString().equalsIgnoreCase(mContext.getResources().getString(R.string.Sanitation)))
-//                {
-//                    Intent subActivityIntent = new Intent(mContext, SubActivityChoice.class);
-//                    subActivityIntent.putExtra("ID", mContext.getResources().getString(R.string.Sanitation));
-//                    mContext.startActivity(subActivityIntent);
-//
-//                }
-//                else if( holder.title.getText().toString().equalsIgnoreCase(mContext.getResources().getString(R.string.malnourished)))
-//                {
-//                    Intent subActivityIntent = new Intent(mContext, Visit_Choice.class);
-//                    subActivityIntent.putExtra("ID", mContext.getResources().getString(R.string.malnourished));
-//                    mContext.startActivity(subActivityIntent);
-//
-//                }
-
-
 }
 

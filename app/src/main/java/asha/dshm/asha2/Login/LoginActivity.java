@@ -109,7 +109,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             }
         });
 
-        mLoginFormView = findViewById(R.id.login_form);
+//        mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
         Intent intent = getIntent();
         //lan=intent.getExtras().getString("la");
@@ -248,7 +248,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 //                Toast.makeText(this, "enter pass", Toast.LENGTH_SHORT).show();
 //            }
 //            password = mPasswordView.getText().toString();
-            showProgress(true);
+//            showProgress(true);
             mAuthTask = new UserLoginTask(email, password);
             mAuthTask.execute((Void) null);
         }
@@ -400,7 +400,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         @Override
         protected void onPostExecute(final Boolean success) {
             mAuthTask = null;
-            showProgress(false);
+//            showProgress(false);
             Log.d("auth  ", String.valueOf(mAuthTask));
             if (success) {
                 Intent loginIntent= new Intent(LoginActivity.this, ActivityChoice.class);
@@ -419,7 +419,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         @Override
         protected void onCancelled() {
             mAuthTask = null;
-            showProgress(false);
+//            showProgress(false);
         }
     }
 }
